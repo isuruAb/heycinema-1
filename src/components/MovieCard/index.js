@@ -18,11 +18,19 @@ const MovieCard = ({ movie }) => {
         onError={() => setImageSource(fallbackImage)}
       />
       <Card.ImgOverlay className={`${style.container} offset-4 col-8 p-0 p-3`}>
-        <Card.Title className={style.title}>{movie?.Title}</Card.Title>
+        <Card.Title className={`${style.title} text-truncate`}>
+          {movie?.Title}
+        </Card.Title>
         <Card.Subtitle className={`mb-3 text-muted ${style.subtitle}`}>
           {movie?.Year}
         </Card.Subtitle>
-        <Card.Link className={style.link} href="#">View More</Card.Link>
+        <Card.Link
+          className={style.link}
+          target="_blank"
+          href={`https://www.imdb.com/title/${movie?.imdbID}`}
+        >
+          View More
+        </Card.Link>
       </Card.ImgOverlay>
     </Card>
   );
