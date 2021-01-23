@@ -17,7 +17,7 @@ describe("MovieCard", () => {
     );
 
     expect(screen.getByText("Matrix")).toBeInTheDocument();
-    expect(screen.getByText("2019")).toBeInTheDocument();
+    expect(screen.getByText("Year: 2019")).toBeInTheDocument();
     expect(screen.getByAltText("Matrix Poster")).toBeInTheDocument();
   });
 });
