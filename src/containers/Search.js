@@ -1,18 +1,20 @@
 import React from "react";
 
 import { Container } from "react-bootstrap";
+import { useQuery } from "../hooks/useQuery";
+import { SEARCH_MOVIE } from "../schema";
 import MovieList from "../components/MovieList";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 
 const Search = () => {
-  const movies = {}
+  const [movies, searchMovie] = useQuery(SEARCH_MOVIE, {});
 
   const onSearchSubmit = (searchText) => {
-    
+    searchMovie({ query: { s: searchText, type: "movie", page: 1 } });
   };
-
+  
   return (
     <>
       <Header onSearchSubmit={onSearchSubmit} />
