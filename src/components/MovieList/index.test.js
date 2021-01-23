@@ -27,10 +27,10 @@ describe("MovieList", () => {
     );
 
     expect(screen.getByText("Matrix")).toBeInTheDocument();
-    expect(screen.getByText("2019")).toBeInTheDocument();
+    expect(screen.getByText("Year: 2019")).toBeInTheDocument();
     expect(screen.getByAltText("Matrix Poster")).toBeInTheDocument();
     expect(screen.getByText("Matrix Reloaded")).toBeInTheDocument();
-    expect(screen.getByText("2015")).toBeInTheDocument();
+    expect(screen.getByText("Year: 2015")).toBeInTheDocument();
     expect(screen.getByAltText("Matrix Reloaded Poster")).toBeInTheDocument();
   });
 });
