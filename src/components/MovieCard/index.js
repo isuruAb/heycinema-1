@@ -22,7 +22,7 @@ const MovieCard = ({ movie }) => {
           {movie?.Title}
         </Card.Title>
         <Card.Subtitle className={`mb-3 text-muted ${style.subtitle}`}>
-          {movie?.Year}
+          Year: {movie?.Year}
         </Card.Subtitle>
         <Card.Link
           className={style.link}
