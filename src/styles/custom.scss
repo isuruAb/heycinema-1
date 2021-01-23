@@ -1,0 +1,16 @@
+@import "./colors.scss";
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+);
+
+$colors: (
+  "tertiary": $tertiary,
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    font-family: "Helvetica Neue", sans-serif;
+}
