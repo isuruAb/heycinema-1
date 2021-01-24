@@ -12,16 +12,20 @@ The technologies/tools used to build the app: React JS, Javascript, HTML, SASS, 
 4. Loading and error states handled.
 5. Mobile friendly
 
-## Feature List
+## App Feature List
 
 1. Search movie
-2. List search result
-3. Mobile friendly
+2. Advance search
+3. List search result
+4. Pagination
+5. Mobile friendly
 
 ## Improvement Area
 
 1. Redux store integration instead of local state as a store.
-2. SEO friendly route for search & pagination
+2. SEO friendly route for search & pagination.
+3. Multiple selection in advance filter.
+4. Code coverage report integration.
 
 ## Architecture
 

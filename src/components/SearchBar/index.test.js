@@ -28,7 +28,7 @@ describe("SearchBar", () => {
     });
     expect(screen.getByRole("textbox")).toHaveValue("JavaScript");
 
-    fireEvent.submit(screen.getByRole("button"));
+    fireEvent.submit(screen.queryAllByRole("button")[0]);
     expect(onSubmit).toHaveBeenCalledTimes(1);
   });
 });

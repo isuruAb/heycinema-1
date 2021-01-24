@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Container, Alert } from "react-bootstrap";
+import { Container, Alert, Badge } from "react-bootstrap";
 import { useQuery } from "../hooks/useQuery";
 import { SEARCH_MOVIE } from "../schema";
 import MovieList from "../components/MovieList";
@@ -12,10 +12,12 @@ import Pagination from "../components/Pagination";
 const Search = () => {
   const [movies, searchMovie, fetchNextMovies] = useQuery(SEARCH_MOVIE, {});
   const [currentPage, setCurrentPage] = useState();
+  const [category, setCategory] = useState();
 
-  const onSearchSubmit = (searchText) => {
+  const onSearchSubmit = (searchText, category) => {
     setCurrentPage(1);
-    searchMovie({ query: { s: searchText, type: "movie", page: 1 } });
+    setCategory(category);
+    searchMovie({ query: { s: searchText, type: category, page: 1 } });
   };
 
   const onPaginationClick = (page) => {
@@ -36,7 +38,10 @@ const Search = () => {
         ) : movies?.data?.Search ? (
           <div>
             <Alert variant={"success"} className={"mt-3"}>
-              {movies?.data?.totalResults} result(s) found.
+              {movies?.data?.totalResults} result(s) found.{" "}
+              <h6 className="d-inline ml-2">
+                <Badge variant="primary">{category}</Badge>
+              </h6>
             </Alert>
             <MovieList movies={movies?.data?.Search} />
             <Pagination

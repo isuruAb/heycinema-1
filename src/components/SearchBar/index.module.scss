@@ -14,3 +14,14 @@ svg {
   padding-right: 34px;
   color: $tertiary !important;
 }
+
+.dropdown {
+  right: 40px;
+
+  button {
+    color: $primary;
+    &:hover, &:focus {
+      color: $primary;
+    }
+  }
+}
