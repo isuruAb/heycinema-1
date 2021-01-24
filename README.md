@@ -21,6 +21,7 @@ The technologies/tools used to build the app: React JS, Javascript, HTML, SASS, 
 ## Improvement Area
 
 1. Redux store integration instead of local state as a store.
+2. SEO friendly route for search & pagination
 
 ## Architecture
 
