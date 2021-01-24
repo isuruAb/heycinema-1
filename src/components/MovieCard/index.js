@@ -25,7 +25,7 @@ const MovieCard = ({ movie }) => {
           Year: {movie?.Year}
         </Card.Subtitle>
         <Card.Link
-          className={style.link}
+          className={`${style.link} pb-2`}
           target="_blank"
           href={`https://www.imdb.com/title/${movie?.imdbID}`}
         >
